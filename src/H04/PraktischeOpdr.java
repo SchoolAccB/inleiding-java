@@ -25,12 +25,6 @@ public class PraktischeOpdr extends Applet{
         g.setColor(Color.black);
         g.drawArc(290,120,70,70,0,360);
 
-
-
-
-
-
-
     }
 
 
