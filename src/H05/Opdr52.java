@@ -5,12 +5,14 @@ import java.applet.*;
 
 public class Opdr52 extends Applet {
 
+     int hoogte1;
+     int y1;
 
 
     public void init() {
 
-
-
+        hoogte1 = 100;
+        y1 = 100;
 
     }
 
@@ -18,9 +20,9 @@ public class Opdr52 extends Applet {
 
         g.drawLine(25,200,25,0);
         g.drawLine(25,200,225,200);
-        g.drawRect(55,120,20,80);
+        g.drawRect(55,y1,20,hoogte1);
         g.setColor(Color.green);
-        g.fillRect(56,121,19,79);
+        g.fillRect(56,y1+1,19, hoogte1-1);
         g.setColor(Color.black);
         g.drawRect(105,0,20,200);
         g.setColor(Color.red);

@@ -7,6 +7,7 @@ public class Opdr44 extends Applet {
 
 
     public void paint(Graphics g) {
+
         g.drawLine(25,200,25,0);
         g.drawLine(25,200,225,200);
         g.drawRect(55,120,20,80);
