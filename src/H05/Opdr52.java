@@ -8,11 +8,25 @@ public class Opdr52 extends Applet {
      int hoogte1;
      int y1;
 
+     int hoogte2;
+     int y2;
+
+     int hoogte3;
+     int y3;
+
 
     public void init() {
 
-        hoogte1 = 100;
-        y1 = 100;
+        /* Als hoogte "x" omhoog gaat moet y "x" omlaag */
+
+        hoogte1 = 80;
+        y1 = 120;
+
+        hoogte2 = 200;
+        y2 = 0;
+
+        hoogte3 = 160;
+        y3 = 40;
 
     }
 
@@ -24,13 +38,13 @@ public class Opdr52 extends Applet {
         g.setColor(Color.green);
         g.fillRect(56,y1+1,19, hoogte1-1);
         g.setColor(Color.black);
-        g.drawRect(105,0,20,200);
+        g.drawRect(105,y2,20,hoogte2);
         g.setColor(Color.red);
-        g.fillRect(106,1,19,199);
+        g.fillRect(106,y2+1,19,hoogte2-1);
         g.setColor(Color.black);
-        g.drawRect(155,40,20,160);
+        g.drawRect(155,y3,20,hoogte3);
         g.setColor(Color.yellow);
-        g.fillRect(156,41,19,159);
+        g.fillRect(156,y3+1,19,hoogte3-1);
         g.setColor(Color.black);
         g.drawLine(23,40,27,40);
         g.drawLine(23,80,27,80);
