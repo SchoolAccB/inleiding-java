@@ -4,7 +4,6 @@ import java.awt.*;
 import java.applet.*;
 
 public class Opdr61 extends Applet{
-
     int opbrengst;
     double verdeling;
 

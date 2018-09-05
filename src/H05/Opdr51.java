@@ -14,8 +14,8 @@ public class Opdr51 extends Applet {
 
         opvulkleur = Color.MAGENTA;
         lijnkleur = Color.BLACK;
-        breedte = 110;
-        hoogte = 70;
+        breedte = 150;
+        hoogte = 120;
     }
 
 
