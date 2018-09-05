@@ -19,8 +19,8 @@ public class Opdr52 extends Applet {
 
         /* Als hoogte "x" omhoog gaat moet y "x" omlaag */
 
-        hoogte1 = 80;
-        y1 = 120;
+        hoogte1 = 120;
+        y1 = 80;
 
         hoogte2 = 200;
         y2 = 0;
