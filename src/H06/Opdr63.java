@@ -18,9 +18,4 @@ public class Opdr63 extends Applet {
         g.drawString("Negatief getal: " + negatiefgetal,20,20);
     }
 
-    
-
-
-
-
 }
