@@ -1,64 +1,64 @@
 package Opdr81;
 
-import java.applet.*;
 import java.awt.*;
+import java.applet.*;
 import java.awt.event.*;
 
-public class Opdr81 extends Applet{
+public class Opdr81 extends Applet {
 
-
-    Button okknop;
-    Button clearknop;
-    String schermtekst;
+    Button knop1;
+    Button knop2;
     TextField tekstvak;
+    String schermtekst;
     Label label;
-    String s;
+    String string;
 
+    public void init() {
 
-    public void init(){
-        setSize(600,600);
-        tekstvak = new TextField("", 30);
-        s = "";
-        okknop = new Button();
-        okknop.setLabel("Ok");
-        add(okknop);
-        okknop.addActionListener( new OkKnopListener() );
-        tekstvak = new TextField("",60);
-        add (tekstvak);
-        label = new Label("Typ hier iets");
+        string = "";
+        knop1 = new Button("Ok");
+        knop2 = new Button("Clear");
+        label = new Label ("Type hier");
         add(label);
+        tekstvak = new TextField("",20);
+        add(tekstvak);
+        knop1.addActionListener ( new Knop1Listener () );
+        knop2.addActionListener ( new Knop2Listener () );
+        add(knop1);
+        add(knop2);
+
+
+
+
 
     }
-
-    public void paint(Graphics g){
-        setBackground(Color.white);
-        g.drawString(s, 50, 60 );
-
+    public void paint (Graphics g) {
+        g.drawString(string, 45,45);
         g.drawString(schermtekst,50,60);
+
     }
-
-    class OkKnopListener implements ActionListener {
-        public void actionPerformed(ActionEvent e) {
-
-            s = tekstvak.getText();
+    class Knop1Listener implements ActionListener {
+        public void actionPerformed( ActionEvent e ) {
+            string = tekstvak.getText();
+            tekstvak.setText("");
+            schermtekst = "";
+            repaint();
+        }
+    }
+    class Knop2Listener implements ActionListener {
+        public void actionPerformed( ActionEvent e ) {
+            string = tekstvak.getText();
             tekstvak.setText("");
             schermtekst = "";
             repaint();
 
         }
     }
-    class ClearKnopListener implements ActionListener {
-        public void actionPerformed(ActionEvent e) {
 
-            tekstvak.setText("  ");
-            repaint();
 
-        }
-    }
+
+
+
 }
-
-
-
-
 
 
