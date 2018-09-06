@@ -14,7 +14,7 @@ public class Opdr62 extends Applet{
 
         secondesperuur = 60*60;
         secondesperdag = secondesperuur*24;
-        secondesperjaar = secondesperdag*364;
+        secondesperjaar = secondesperdag*365;
     }
 
     public void paint (Graphics g) {
