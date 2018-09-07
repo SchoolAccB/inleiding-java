@@ -11,15 +11,15 @@ public class Opdr81 extends Applet {
     TextField tekstvak;
     String schermtekst;
     Label label;
-    String string;
+
 
     public void init() {
 
-        string = "";
         knop1 = new Button("Ok");
         knop2 = new Button("Clear");
         label = new Label ("Type hier");
         add(label);
+
         tekstvak = new TextField("",20);
         add(tekstvak);
         knop1.addActionListener ( new Knop1Listener () );
@@ -33,27 +33,26 @@ public class Opdr81 extends Applet {
 
     }
     public void paint (Graphics g) {
-        g.drawString(string, 45,45);
+
         g.drawString(schermtekst,50,60);
 
     }
     class Knop1Listener implements ActionListener {
         public void actionPerformed( ActionEvent e ) {
-            string = tekstvak.getText();
+            schermtekst = tekstvak.getText();
             tekstvak.setText("");
-            schermtekst = "";
             repaint();
         }
     }
     class Knop2Listener implements ActionListener {
         public void actionPerformed( ActionEvent e ) {
-            string = tekstvak.getText();
+            schermtekst = tekstvak.getText();
             tekstvak.setText("");
-            schermtekst = "";
             repaint();
 
         }
     }
+
 
 
 

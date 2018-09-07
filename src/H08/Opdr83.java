@@ -16,11 +16,15 @@ double btwbedrag;
     public void init() {
 
         setSize(600, 400);
+
         tekstvak = new TextField("", 20);
+
         btwKnop = new Button("Bereken");
         btwKnopListener bkl = new btwKnopListener ();
         btwKnop.addActionListener(bkl);
+
         label = new Label("Bereken hier je bedrag inclusief BTW:");
+
         add(label);
         add(tekstvak);
         add(btwKnop);
@@ -37,11 +41,9 @@ double btwbedrag;
     }
     class btwKnopListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
-            String s = tekstvak.getText();
-            btwbedrag = Double.parseDouble( s );
+            btwbedrag = Integer.parseInt(tekstvak.getText());
             btwbedrag = btwbedrag * 1.21;
-            btwbedrag = (int) (btwbedrag * 10);
-            btwbedrag = btwbedrag / 10;
+            tekstvak.setText("");
             repaint();
 
         }
