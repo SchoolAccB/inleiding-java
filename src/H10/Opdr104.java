@@ -26,8 +26,8 @@ public class Opdr104 extends Applet {
         add(okknop);
     }
     public void paint (Graphics g) {
-        g.drawString( maand, 100,75);
-        g.drawString( jaartal,100,90);
+        g.drawString( maand, 75,75);
+        g.drawString( jaartal,75,90);
     }
 
     class tekstvakListener implements ActionListener {
@@ -72,7 +72,11 @@ public class Opdr104 extends Applet {
                 maand = "December heeft 31 dagen.";
             }
             if (input == 2000) {
-                jaartal = "2000 is een schrikkeljaar dus februari heeft 29 dagen.";
+                jaartal = "Het is een schrikkeljaar dus februari heeft 29 dagen.";
+
+            }
+            if (input == 2004) {
+                jaartal = "Het is een schrikkeljaar dus februari heeft 29 dagen.";
 
             }
             else {
@@ -129,6 +133,17 @@ public class Opdr104 extends Applet {
             }
             if (input == 12) {
                 maand = "November heeft 31 dagen.";
+            }
+            if (input == 2000) {
+                jaartal = "Het is een schrikkeljaar dus februari heeft 29 dagen.";
+
+            }
+            if (input == 2004) {
+                jaartal = "Het is een schrikkeljaar dus februari heeft 29 dagen.";
+
+            }
+            else {
+                jaartal = "Het is geen schrikkeljaar.";
             }
 
 
