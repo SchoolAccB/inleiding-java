@@ -41,8 +41,9 @@ public class Opdr101 extends Applet {
             if (input > hooggetal) {
                 hooggetal = input;
                 s = "" + hooggetal;
-                repaint();
             }
+            tekstvak.setText("");
+            repaint();
 
         }
     }
@@ -55,8 +56,9 @@ public class Opdr101 extends Applet {
             if (input > hooggetal) {
                 hooggetal = input;
                 s = "" + hooggetal;
-                repaint();
             }
+            tekstvak.setText("");
+            repaint();
 
 
         }
