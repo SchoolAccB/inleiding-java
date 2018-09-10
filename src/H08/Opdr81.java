@@ -40,13 +40,11 @@ public class Opdr81 extends Applet {
     class Knop1Listener implements ActionListener {
         public void actionPerformed( ActionEvent e ) {
             schermtekst = tekstvak.getText();
-            tekstvak.setText("");
             repaint();
         }
     }
     class Knop2Listener implements ActionListener {
         public void actionPerformed( ActionEvent e ) {
-            schermtekst = tekstvak.getText();
             tekstvak.setText("");
             repaint();
 
