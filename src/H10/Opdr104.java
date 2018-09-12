@@ -15,9 +15,14 @@ public class Opdr104 extends Applet {
     String s;
     String maand;
     String jaartal;
+    Label label;
+    Label label2;
 
     public void init () {
-        tekstvak = new TextField("", 25);
+        label = new Label("Maand: ");
+        add(label);
+
+        tekstvak = new TextField("", 10);
         tekstvak.addActionListener(new tekstvakListener());
         add(tekstvak);
 
@@ -25,7 +30,10 @@ public class Opdr104 extends Applet {
         okknop.addActionListener(new okknopListener());
         add(okknop);
 
-        tekstvak2 = new TextField("", 25);
+        label2 = new Label("Jaar: ");
+        add(label2);
+
+        tekstvak2 = new TextField("", 10);
         tekstvak2.addActionListener(new tekstvak2Listener());
         add(tekstvak2);
 
