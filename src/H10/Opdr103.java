@@ -23,11 +23,15 @@ public class Opdr103 extends Applet {
         okknop.addActionListener(new okknopListener());
         add(okknop);
     }
+
     public void paint (Graphics g) {
+
         g.drawString( maand, 100,75);
     }
+
     class tekstvakListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
+
             s = tekstvak.getText();
             input = Integer.parseInt(s);
 
@@ -79,6 +83,7 @@ public class Opdr103 extends Applet {
 
     class okknopListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
+
             s = tekstvak.getText();
             input = Integer.parseInt(s);
 
@@ -118,7 +123,6 @@ public class Opdr103 extends Applet {
             if (input == 12) {
                 maand = "November heeft 31 dagen.";
             }
-
 
             tekstvak.setText("");
             repaint();
