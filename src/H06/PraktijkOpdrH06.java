@@ -3,11 +3,9 @@ package H06;
 import java.awt.*;
 import java.applet.*;
 
-public class PraktijkOpdrH06 extends Applet{
+public class PraktijkOpdrH06 extends Applet {
 
     double gemiddelde;
-
-
 
     public void init() {
 

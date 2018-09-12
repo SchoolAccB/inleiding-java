@@ -7,51 +7,79 @@ import java.awt.event.*;
 public class Opdr105 extends Applet {
 
     double input;
+    double input2;
+    double input3;
+    double input4;
+    double input5;
     double gem;
-    double gem2;
-    double gem3;
 
     TextField tekstvak;
-    Button okKnop;
-    String voldoende;
-    String voldoende2;
-    String voldoende3;
+    TextField tekstvak2;
+    TextField tekstvak3;
+    TextField tekstvak4;
+    TextField tekstvak5;
+
+    Label label;
+
+    Button calcKnop;
+
     String s;
+    String voldoende;
 
     public void init() {
 
-        tekstvak = new TextField("", 20);
-        tekstvak.addActionListener(new tekstvakListener());
+        label = new Label("Voer je cijfers in:                                                                                        " );
+        add(label);
+
+        tekstvak = new TextField(" ", 2);
         add(tekstvak);
 
-        okKnop = new Button("Ok");
-        okKnop.addActionListener(new okKnopListener());
-        add(okKnop);
 
-        gem = 0;
-        gem2 = 0;
-        gem3 = 0;
+        tekstvak2 = new TextField(" ", 2);
+        add(tekstvak2);
+
+        tekstvak3 = new TextField(" ", 2);
+        add(tekstvak3);
+
+        tekstvak4 = new TextField(" ", 2);
+        add(tekstvak4);
+
+        tekstvak5 = new TextField(" ", 2);
+        add(tekstvak5);
+
+        calcKnop = new Button("Bereken gemiddelde");
+        calcKnop.addActionListener(new calcKnopListener());
+        add(calcKnop);
+
+        voldoende = " ";
     }
-    public void paint (Graphics g){
+    public void paint (Graphics g)  {
 
-        g.drawString("" + voldoende, 120,50);
-        g.drawString("" + voldoende2, 120,65);
-        g.drawString("" + voldoende3, 120,80);
-
-        g.drawString("" + gem, 100,50);
-        g.drawString("" + gem2, 100,65);
-        g.drawString("" + gem3, 100,80);
+        g.drawString("Je gemiddelde is " + gem, 50, 100);
+        g.drawString("" +  voldoende, 50,115);
     }
-
-    class tekstvakListener implements ActionListener {
+    class calcKnopListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
 
             s = tekstvak.getText();
             input = Double.parseDouble(s);
-            gem = input;
-            voldoende = " ";
-            voldoende2 = " ";
-            voldoende3 = " ";
+
+            s = tekstvak2.getText();
+            input2 = Double.parseDouble(s);
+
+            s = tekstvak3.getText();
+            input3 = Double.parseDouble(s);
+
+            s = tekstvak4.getText();
+            input4 = Double.parseDouble(s);
+
+            s = tekstvak5.getText();
+            input5 = Double.parseDouble(s);
+
+
+            gem = (input + input2 + input3 + input4 + input5) / 5;
+            gem = (int) (gem * 10);
+            gem = gem / 10.0;
 
             if (gem > 5.5) {
                 voldoende = "Voldoende";
@@ -60,43 +88,10 @@ public class Opdr105 extends Applet {
                 voldoende = "Onvoldoende";
             }
             tekstvak.setText("");
-            repaint();
-
-            input = 0;
-
-            gem2 = 0;
-
-
-            gem2 = input;
-
-            if (gem2 > 5.5) {
-                voldoende2 = "Voldoende";
-            }
-            else {
-                voldoende2 = "Onvoldoende";
-            }
-
-            tekstvak.setText("");
-            repaint();
-
-
-
-        }
-    }
-    class okKnopListener implements ActionListener {
-        public void actionPerformed(ActionEvent e) {
-
-            s = tekstvak.getText();
-            input = Double.parseDouble(s);
-            gem = input;
-
-            if (gem > 5.5) {
-                voldoende = "Voldoende";
-            }
-            else {
-                voldoende = "Onvoldoende";
-            }
-            tekstvak.setText("");
+            tekstvak2.setText("");
+            tekstvak3.setText("");
+            tekstvak4.setText("");
+            tekstvak5.setText("");
             repaint();
         }
     }
