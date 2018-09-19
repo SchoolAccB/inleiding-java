@@ -17,8 +17,8 @@ public class Opdr114 extends Applet {
     public void paint (Graphics g) {
 
 
-        for (int i = 0; antwoord < 30; i++) {
-            antwoord = i * drie;
+        for (int teller = 0; antwoord < 30; teller++) {
+            antwoord = teller * drie;
             x += 20;
             g.drawString(" " + antwoord, x, 20);
 
