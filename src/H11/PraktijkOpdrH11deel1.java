@@ -36,7 +36,7 @@ public class PraktijkOpdrH11deel1 extends Applet {
         for (int teller = 1; teller < 11; teller++) {
             y += 15;
             uitkomst = teller * input;
-            g.drawString("" + teller + " * " + input + " = " + uitkomst, 20, y);
+            g.drawString("" + teller + " x " + input + " = " + uitkomst, 20, y);
         }
     }
 
