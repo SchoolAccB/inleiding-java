@@ -41,7 +41,7 @@ public class Opdr103 extends Applet {
             if (input == 2) {
                 maand = "Februari heeft 28 dagen maar in het schrikkeljaar 29.";
             }
-            if (input == 0) {
+            if (input == 3) {
                 maand = "Maart heeft 31 dagen.";
             }
             if (input == 4) {
