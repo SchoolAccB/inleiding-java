@@ -2,31 +2,82 @@ package H12;
 
 import java.awt.*;
 import java.applet.*;
+import java.awt.event.*;
 
 public class Opdr125 extends Applet {
 
     boolean gevonden;
-    double[] salaris = { 100.0, 200.0, 500.0, 400.0, 300.0 };
-    double gezocht;
+    int gezocht;
+    int index;
 
-    public void init() {
-        gezocht = 400;
-        gevonden = false;
-        int teller = 0;
-        while(teller < salaris.length) {
-            if(salaris[teller] == gezocht) {
-                gevonden = true;
-            }
-            teller ++;
-        }
+    int[] tabel = {100, 200, 300, 400, 500, 600, 700, 800, 900, 1000};
+
+    TextField tekstvak;
+    Button zoekKnop;
+
+    String s;
+
+    public void init () {
+
+
+        tekstvak = new TextField(20);
+        tekstvak.addActionListener(new tekstvakListener());
+        add(tekstvak);
+
+        zoekKnop = new Button("Zoek");
+        zoekKnop.addActionListener(new zoekKnopListener());
+        add(zoekKnop);
     }
+    public void paint (Graphics g) {
 
-    public void paint(Graphics g) {
+        for (int teller = 0; teller < tabel.length; teller++) {
+            g.drawString("" + tabel[teller], 50, 20 * teller + 60);
+        }
+
         if(gevonden == true) {
-            g.drawString("De waarde is gevonden.", 20, 50);
+            g.drawString("De waarde is gevonden.", 100, 60);
+        }
+        if(gevonden == true) {
+            g.drawString("Index: " + index, 100, 80);
         }
         else {
-            g.drawString("De waarde is niet gevonden.", 20, 50);
+            g.drawString("De waarde is niet gevonden.", 100, 60);
+        }
+
+    }
+    class tekstvakListener implements ActionListener {
+        public void actionPerformed(ActionEvent e) {
+            s = tekstvak.getText();
+            gezocht = Integer.parseInt(s);
+
+            index = (gezocht / 100)-1;
+
+            gevonden = false;
+
+            int teller = 0;
+            while(teller < tabel.length) {
+                if(tabel[teller] == gezocht) {
+                    gevonden = true;
+                }
+                teller ++;
+                repaint();
+            }
+
+            tekstvak.setText("");
+            repaint();
+        }
+    }
+    class zoekKnopListener implements ActionListener {
+        public void actionPerformed(ActionEvent e) {
+            s = tekstvak.getText();
+            gezocht = Integer.parseInt(s);
+
+            tekstvak.setText("");
+            repaint();
         }
     }
 }
+
+
+
+
