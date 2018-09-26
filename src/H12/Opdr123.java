@@ -24,7 +24,7 @@ public class Opdr123 extends Applet {
         tekstvakken[4].addActionListener(new tekstvakListener());
 
         okKnop = new Button("Ok");
-        okKnop.addActionListener(new okKnopListener(0));
+        okKnop.addActionListener(new okKnopListener());
         add(okKnop);
 
     }
