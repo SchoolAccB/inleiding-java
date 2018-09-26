@@ -71,6 +71,18 @@ public class Opdr124 extends Applet {
             s = tekstvak.getText();
             gezocht = Integer.parseInt(s);
 
+            index = (gezocht / 100)-1;
+
+            gevonden = false;
+
+            int teller = 0;
+            while(teller < tabel.length) {
+                if(tabel[teller] == gezocht) {
+                    gevonden = true;
+                }
+                teller ++;
+            }
+
             tekstvak.setText("");
             repaint();
         }
