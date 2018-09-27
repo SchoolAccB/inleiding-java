@@ -43,6 +43,8 @@ public class Opdr126 extends Applet {
         public void actionPerformed(ActionEvent e) {
             gezocht = Integer.parseInt(tekstvak.getText());
 
+            keerGevonden = 0;
+
             gevonden = false;
 
             int teller = 0;
@@ -63,6 +65,8 @@ public class Opdr126 extends Applet {
     class zoekKnopListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
             gezocht = Integer.parseInt(tekstvak.getText());
+
+            keerGevonden = 0;
 
             gevonden = false;
 

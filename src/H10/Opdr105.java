@@ -61,8 +61,7 @@ public class Opdr105 extends Applet {
     class calcKnopListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
 
-            s = tekstvak.getText();
-            input = Double.parseDouble(s);
+            input = Double.parseDouble(tekstvak.getText());
 
             s = tekstvak2.getText();
             input2 = Double.parseDouble(s);
