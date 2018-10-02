@@ -22,8 +22,6 @@ public class PraktijkOpdrH13deel2 extends  Applet {
 
     }
     void boomgaard (Graphics g) {
-//
-//        boom(g);
 
         for(int i = 0; i < 5; i++) {
 
@@ -43,7 +41,6 @@ public class PraktijkOpdrH13deel2 extends  Applet {
             x += 40;
             x2 += 40;
         }
-
     }
     void boom(Graphics g) {
 
