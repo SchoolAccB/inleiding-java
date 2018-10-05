@@ -4,10 +4,10 @@ import java.awt.*;
 import java.applet.*;
 import java.awt.event.*;
 import java.util.Random;
+import java.net.URL;
+
 
 public class Opdr142 extends Applet {
-
-    boolean draw;
 
     Button deelKaarten;
 
@@ -17,7 +17,14 @@ public class Opdr142 extends Applet {
     int x;
     int y;
 
+    private URL pad;
+    private AudioClip cards;
+
     public void init() {
+
+        pad = Opdr142.class.getResource("/Resources/");
+
+        cards = getAudioClip(pad, "cards.wav");
 
         x = 40;
         y = 40;
@@ -110,6 +117,7 @@ public class Opdr142 extends Applet {
                 }
 
             }
+            cards.play();
 
 
         }

@@ -92,7 +92,6 @@ public class H14 extends Applet {
         g.drawImage(fruitpics[teller2], 250, 70,100,180, this);
         g.drawImage(fruitpics[teller3], 350, 70,100,180, this);
 
-
         if (krediet == 1) {
             geenPunten = "Koop nieuwe punten om verder te spelen.";
         }
