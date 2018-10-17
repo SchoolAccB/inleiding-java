@@ -51,7 +51,7 @@ public class Opdr126 extends Applet {
             while(teller < tabel.length) {
                 if(tabel[teller] == gezocht) {
                     gevonden = true;
-                    keerGevonden = keerGevonden + 1;
+                    keerGevonden += 1;
                 }
                 teller ++;
                 }
@@ -74,7 +74,7 @@ public class Opdr126 extends Applet {
             while(teller < tabel.length) {
                 if(tabel[teller] == gezocht) {
                     gevonden = true;
-                    keerGevonden = keerGevonden + 1;
+                    keerGevonden += 1;
                 }
                 teller ++;
             }

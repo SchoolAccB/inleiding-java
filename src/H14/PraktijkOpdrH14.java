@@ -43,6 +43,7 @@ public class PraktijkOpdrH14 extends  Applet {
         add(label);
 
         tekstvak = new TextField(10);
+        tekstvak.requestFocus();
         tekstvak.addActionListener(new tekstvakListener());
         add(tekstvak);
 

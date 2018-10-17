@@ -33,7 +33,6 @@ public class Opdr124 extends Applet {
         for (int teller = 0; teller < tabel.length; teller++) {
             g.drawString("" + tabel[teller], 50, 20 * teller + 60);
         }
-
         if(gevonden == true) {
             g.drawString("De waarde is gevonden.", 100, 60);
         }
@@ -43,10 +42,10 @@ public class Opdr124 extends Applet {
         else {
             g.drawString("De waarde is niet gevonden.", 100, 60);
         }
-
     }
     class tekstvakListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
+
             s = tekstvak.getText();
             gezocht = Integer.parseInt(s);
 
@@ -82,7 +81,6 @@ public class Opdr124 extends Applet {
                 }
                 teller ++;
             }
-
             tekstvak.setText("");
             repaint();
         }
