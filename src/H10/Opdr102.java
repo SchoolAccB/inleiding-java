@@ -33,24 +33,26 @@ public class Opdr102 extends Applet {
     }
 
     public void paint(Graphics g) {
-        g.drawString("Het hoogste ingevoerde getal is " + hooggetal, 100, 100);
-        g.drawString("Het laagste ingevoerde getal is " + laaggetal, 100, 120);
+
+        g.drawString("Het hoogstk ingevoerde getal is " + hooggetal, 100, 100);
+        g.drawString("Het laagst ingevoerde getal is " + laaggetal, 100, 120);
 
 
     }
 
     class tekstvakListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
+
             s = tekstvak.getText();
             input = Integer.parseInt(s);
             if (input > hooggetal) {
                 hooggetal = input;
-                s = "" + hooggetal;
+
             }
             if (input < laaggetal2) {
                 laaggetal2 = input;
                 laaggetal = laaggetal2;
-                s = "" + laaggetal;
+
             }
             tekstvak.setText("");
             repaint();
@@ -62,14 +64,19 @@ public class Opdr102 extends Applet {
 
     class okKnopListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
+
             s = tekstvak.getText();
             input = Integer.parseInt(s);
             if (input > hooggetal) {
                 hooggetal = input;
-                s = "" + hooggetal;
-                tekstvak.setText("");
-                repaint();
             }
+            if (input < laaggetal2) {
+                laaggetal2 = input;
+                laaggetal = laaggetal2;
+            }
+            tekstvak.setText("");
+            repaint();
+
 
 
         }
